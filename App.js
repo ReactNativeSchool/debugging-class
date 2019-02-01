@@ -35,11 +35,19 @@ class App extends React.Component {
   };
 
   incrementNumber = () => {
-
+    this.setState(state => {
+      return {
+        number: state.number + 1,
+      }
+    })
   };
 
   decrementNumber = () => {
-
+    this.setState(state => {
+      return {
+        number: state.number - 1,
+      }
+    })
   };
 
   render() {
