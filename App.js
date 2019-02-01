@@ -15,10 +15,23 @@ const styles = StyleSheet.create({
 });
 
 class App extends React.Component {
-  state = { number: 3 };
+  state = { number: null };
+
+  componentDidMount() {
+    this.getNumber();
+  }
 
   getNumber = () => {
-
+    fetch("https://pond-relative.glitch.me/number")
+      .then(res => res.json())
+      .then(res => {
+        this.setState({
+          number: res.number
+        });
+      })
+      .catch(err => {
+        alert("an error occurred!");
+      });
   };
 
   incrementNumber = () => {
