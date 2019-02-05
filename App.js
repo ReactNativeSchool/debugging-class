@@ -1,5 +1,6 @@
 import React from "react";
 import { Button, View, Text, StyleSheet } from "react-native";
+import Instabug from 'instabug-reactnative';
 
 const styles = StyleSheet.create({
   container: {
@@ -16,6 +17,12 @@ const styles = StyleSheet.create({
 
 class App extends React.Component {
   state = { number: null };
+
+  constructor(props) {
+    super(props);
+
+    Instabug.startWithToken('b0efa09d936b36032efe2b34ba2adde4', [Instabug.invocationEvent.shake]);
+  }
 
   componentDidMount() {
     this.getNumber();
