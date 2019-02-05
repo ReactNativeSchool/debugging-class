@@ -53,6 +53,7 @@ class App extends React.Component {
   render() {
     return (
       <View style={styles.container}>
+        <Text style={styles.text}>{__DEV__.toString()}</Text>
         <Text style={styles.text}>{this.state.number}</Text>
         <Button title="Increment Number" onPress={this.incrementNumber} />
         <Button title="Decrement Number" onPress={this.decrementNumber} />
