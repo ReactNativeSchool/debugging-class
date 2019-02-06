@@ -36,7 +36,8 @@ class App extends React.Component {
           number: res.number
         });
       })
-      .catch(() => {
+      .catch((error) => {
+        Instabug.reportJSException(error);
         alert("an error occurred!");
       });
   };
