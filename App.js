@@ -58,6 +58,10 @@ class App extends React.Component {
     })
   };
 
+  causeCrash = () => {
+    alert(this.state.data.number);
+  }
+
   render() {
     return (
       <View style={styles.container}>
@@ -66,6 +70,7 @@ class App extends React.Component {
         <Button title="Increment Number" onPress={this.incrementNumber} />
         <Button title="Decrement Number" onPress={this.decrementNumber} />
         <Button title="Get New Number" onPress={this.getNumber} />
+        <Button title="Make it crash" onPress={this.causeCrash} />
       </View>
     );
   }
