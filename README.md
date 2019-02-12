@@ -1,4 +1,4 @@
-The project files for the Debugging Class on reactnativeschool.com.
+The project files for the [Debugging Class on React Native School](https://www.reactnativeschool.com/uploading-images-in-react-native).
 
 ## Running the Project
 
